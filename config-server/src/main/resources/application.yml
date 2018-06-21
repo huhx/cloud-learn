@@ -1,0 +1,18 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/forezp/SpringcloudConfig/
+          searchPaths: respo
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: localhost:8084
+  client:
+    serviceUrl:
+defaultZone: http://127.0.0.1:8080/eureka/  #注册中心地址
